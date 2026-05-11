@@ -56,7 +56,7 @@ function buildInitialState() {
   };
 }
 
-const GROQ_API_KEY = "CHEIA_mea";
+const GROQ_API_KEY = import.meta.env.VITE_GROQ_API_KEY;
 
 async function askGemini(prompt) {
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
